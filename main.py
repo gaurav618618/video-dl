@@ -2,6 +2,8 @@ from urllib.request import urlopen
 video_num = 1
 file_num = 1
 inp_link = input('Enter link: ')
+index = inp_link.find('.mp4')
+inp_link = inp_link[:index+5]
 file_pre = input('Enter File name: ')
 while True:
     append_str = '{}.ts'.format(video_num)
@@ -17,3 +19,5 @@ while True:
     else:
         print('Exited')
         break
+
+# demo_link = https://videos-a.jwpsrv.com/content/conversions/Ux8FajpR/videos/kVgM3EV5-32240523.mp4-full.ts
